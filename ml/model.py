@@ -79,3 +79,13 @@ class MultiHeadAttention(nn.Module):
 
         # Return 
         return output
+
+
+### FEEDFORWARD NETWORK
+
+class FeedForward(nn.Module): 
+    def __init__(self, config: ModelConfig):
+        super().__init__()
+        self.linear1 = nn.Linear(config.d_model, config.d_ff)
+        self.linear2 = nn.Linear(config.d_ff, config.d_model)
+        self.dropout = nn.Dropout(config.dropout)
