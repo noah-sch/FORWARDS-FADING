@@ -1,0 +1,43 @@
+# Bibliothèques essentielles pour le modèle Transformer/LLM
+
+# Framework de deep learning
+torch>=2.2.0
+torchvision>=0.15.0
+
+# Manipulation de données
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Traitement de texte et tokenisation
+transformers>=4.30.0
+tokenizers>=0.13.0
+sentencepiece>=0.1.99
+
+# Gestion de datasets
+datasets>=2.12.0
+
+# Utilitaires pour les tenseurs
+einops>=0.6.1
+
+# Optimisation et entraînement distribué
+accelerate>=0.20.0
+bitsandbytes>=0.39.0
+
+# Monitoring et visualisation
+wandb>=0.15.0
+tensorboard>=2.13.0
+matplotlib>=3.7.0
+
+# Utilitaires généraux
+tqdm>=4.65.0
+pyyaml>=6.0
+safetensors>=0.3.1
+
+# Optionnel : pour entraînement à très grande échelle
+# deepspeed>=0.9.0
+
+# Gestion de configuration
+omegaconf>=2.3.0
+
+# Métriques et évaluation
+scikit-learn>=1.3.0

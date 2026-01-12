@@ -1,0 +1,9 @@
+model:
+    config: 
+        vocab_size: 50000       # Taille du voc
+        dim_embeddings: 512     # Dim embeds
+        nb_heads: 8             # Nb de têtes (multiheads)
+        nb_layers: 6            # Nb de layers
+        dim_ff: 2048            # Dim du feedforward
+        max_seq_len: 1024       # Longueur max d'une séquence
+        dropout: 0.1            # Taux de dropout
