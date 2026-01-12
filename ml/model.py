@@ -89,3 +89,33 @@ class FeedForward(nn.Module):
         self.linear1 = nn.Linear(config.d_model, config.d_ff)
         self.linear2 = nn.Linear(config.d_ff, config.d_model)
         self.dropout = nn.Dropout(config.dropout)
+    
+    def forward(self, x): 
+        x = F.gelu(self.linear1(x))
+        x = self.dropout(x)
+        x = self.linear2(x)
+        return x 
+
+
+### TRANSFORMER BLOCK
+class TransformerBlock(nn.Module):
+    def __init__(self, config: ModelConfig):
+        super().__init__()
+        self.attention = MultiHeadAttention(config)
+        self.feed_forward = FeedForward(config)
+        self.norm1 = nn.LayerNorm(config.d_model)
+        self.norm2 = nn.LayerNorm(config.d_model)
+        self.dropout = nn.Dropout(config.dropout)
+    
+    def forward(self, x, mask=None): 
+        # Attention 
+        attn_o = self.attention(self.norm1(x), mask)
+        x += self.dropout(attn_o)
+
+        # Feedforward 
+        ff_o = self.feed_forward(self.norm2(x))
+        x += self.dropout(ff_o)
+
+        # Return 
+        return x 
+
