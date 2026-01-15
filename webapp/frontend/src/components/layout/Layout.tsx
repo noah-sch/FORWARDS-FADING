@@ -11,7 +11,7 @@ export default function Layout( {children}: LayoutProps ) {
         <>
             <div className="min-h-screen w-screen bg-c4 flex flex-col items-start justify-start">
                 <Header />
-                <main className="flex-1 pt-20">
+                <main className="flex-1 w-full pt-20 px-32">
                     {children}
                 </main>
                 <Footer />

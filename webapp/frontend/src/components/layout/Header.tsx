@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
-import Btn1 from "../globals/Btn1";
-import Btn2 from "../globals/Btn2";
+import Btn1 from "../globals/btns/Btn1";
+import Btn2 from "../globals/btns/Btn2";
 
 export default function Header() {
     const location = useLocation();
@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <>
-            <div className="fixed top-0 w-full h-16 px-32 py-4">
+            <div className="font-sans fixed top-0 w-full h-16 px-32 py-4">
                 <div className="w-full h-full grid grid-cols-3">
                     
                     {/* Logo */}
@@ -23,7 +23,7 @@ export default function Header() {
                             <div className="cursor-pointer">
                                 *
                             </div>
-                            <div className="font-semibold text-c1 text-2xl cursor-pointer">
+                            <div className="font-medium text-c1 text-2xl cursor-pointer">
                                 fading's forward
                             </div>
                         </Link>
