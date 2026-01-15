@@ -1,0 +1,21 @@
+import type { ReactNode } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+
+type LayoutProps = {
+    children: ReactNode;
+}
+
+export default function Layout( {children}: LayoutProps ) {
+    return (
+        <>
+            <div className="min-h-screen w-screen bg-c4 flex flex-col items-start justify-start">
+                <Header />
+                <main className="flex-1 pt-20">
+                    {children}
+                </main>
+                <Footer />
+            </div>
+        </>
+    )
+}
