@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <>
-            <div className="font-sans fixed top-0 w-full h-16 px-32 py-4">
+            <div className="font-sans fixed top-0 w-full h-16 px-32 py-4 z-50 bg-c4">
                 <div className="w-full h-full grid grid-cols-3">
                     
                     {/* Logo */}

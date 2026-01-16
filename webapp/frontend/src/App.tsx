@@ -11,7 +11,7 @@ import Blog from './pages/Blog';
 function App() {
     return (
         <>
-            <div className='w-screen h-screen flex flex-col items-start justify-start bg-c4'>
+            <div className='w-screen h-screen flex flex-col items-start justify-start bg-c4 scrollbar-hide'>
                 <Router>
                     <Routes>
                         {/* Route Chat sans Layout (interface fullscreen) */}

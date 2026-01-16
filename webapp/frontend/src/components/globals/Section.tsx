@@ -7,7 +7,7 @@ type SectionProps = {
 export default function Section( {children}: SectionProps ) {
     return (
         <>
-            <div className="w-full flex flex-col items-center justify-start py-20">
+            <div className="w-full flex flex-col items-center justify-start py-20 gap-10">
                 {children}
             </div>
         </>

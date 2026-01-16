@@ -9,7 +9,7 @@ type TitleSubSectionProps = {
 export default function TitleSubSection ( {title, underTitle}: TitleSubSectionProps ) {
     return (
         <>
-            <div className="w-full flex flex-col items-center justify-start gap-2">
+            <div className="w-full flex flex-col items-center justify-start gap-4">
                 <Title title={title} />
                 <UnderTitle underTitle={underTitle} />
             </div>
